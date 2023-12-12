@@ -1,13 +1,13 @@
 import "./App.css";
-import { Container } from "react-bootstrap";
-import GalleryGrid from "./components/Gallery/GalleryGrid";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Gallery from "./pages/Gallery";
+
 
 function App() {
   return (
     <>
-      <Container className="mt-5">
-        <GalleryGrid />
-      </Container>
+      <Gallery />
     </>
   );
 }
