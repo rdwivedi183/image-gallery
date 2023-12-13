@@ -8,8 +8,8 @@ const GalleryGrid = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const openModal = (image) => {
-    setSelectedImage(image);
+  const openModal = (image, index) => {
+    setSelectedImage(index);
     setShowModal(true);
   };
 
@@ -27,7 +27,7 @@ const GalleryGrid = () => {
               src={image?.url}
               alt={image.alt}
               className="gallery-thumbnail w-100" style={{height: '200px'}}
-              onClick={() => openModal(image.url)}
+              onClick={() => openModal(image.url, index)}
             />
           </Col>
         ))}

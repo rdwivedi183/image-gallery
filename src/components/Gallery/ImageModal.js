@@ -30,6 +30,11 @@ const ImageModal = ({ show, closeModal, images, selectedImage }) => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [show, currentIndex]);
   
+  useEffect(() => {
+    // set selected image in Carousel
+    selectedImage && setCurrentIndex(selectedImage); 
+  }, [selectedImage])
+
   return (
     <Modal show={show} onHide={closeModal} centered>
       <Modal.Body onKeyDown={handleKeyDown} tabIndex="0">
